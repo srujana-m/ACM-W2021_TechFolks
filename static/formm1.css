@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: poppins, sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+    }
+  
+    #header{
+    padding: 20px;
+    width: 100%;
+    background: #FFF;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+    
+    #header #logo{
+    font-style: italic;
+    font-size: 20px;
+    }
+    
+    #header #logo span{
+    color: #564FCC;
+    }
+    #header nav{
+    color: #000;
+    }
+    
+    #header nav a{
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    }
+    
+    #header nav a:last-child{
+        color: white;
+        background: #6C63FF;
+        padding: 10px 20px;
+        margin-left: 30px;
+        border-radius: 30px;
+        }
+
+     #header nav a:hover{
+        opacity: 0.9;
+        }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+}
+
+#title {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 36px;
+  line-height: 10px;
+}
+
+#description {
+  text-align: center;
+  font-style: italic;
+}
+
+#survey-form {
+  background: white;
+  padding: 40px;
+  text-align: justify;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#name,
+#email,
+#number,
+#comments-suggestions {
+  width: 95%;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.clue {
+  font-size: 14px;
+}
+
+#dropdown,
+#feature {
+  width: 99%;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+#submit {
+  width: 99%;
+  padding: 12px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  background: #3d08fce5;
+  font-size: 18px;
+  color: #f7f7f7;
+  cursor: pointer;
+}
+
+footer p {
+  text-align: center;
+  font-size: 12px;
+  cursor: default;
+  font-family: "Gloria Hallelujah", cursive;
+  letter-spacing: 3px;
+  color: #f7f7f7;
+  margin-bottom: 2px;
+}
+
+footer p:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  text-decoration: underline;
+}
+
+#github:hover,
+#discord:hover,
+#codepen:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+
+#github,
+#discord,
+#codepen {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#github,
+#codepen {
+  filter: invert(89%) sepia(0%) saturate(11%) hue-rotate(329deg)
+    brightness(112%) contrast(105%);
+  width: 35px;
+}
+
+#discord {
+  width: 38px;
+}
+
+#github:hover,
+#codepen:hover {
+  filter: none;
+}
+
+footer .img {
+  text-align: center;
+}
+footer {
+    width:100vw;
+    position:fixed;
+    bottom:0px
+  }
+  footer div {
+    background-color:#3d08fce5;
+    margin: -5px 0px 0px 0px;
+    padding:0px;
+    color: #fff;
+    text-align:center;
+  }
+  svg {
+    width:100%;
+  }
+  
+  
+  .wave {
+    animation: wave 10s linear;
+    animation-iteration-count:infinite;
+    fill: #3d08fce5;
+  }
+  
+  
+  .gooeff {
+      filter: url(#goo);
+  }
+  #wave2 {
+    animation-duration:10s;
+    animation-direction: reverse;
+    opacity: .6
+  }
+  #wave3 {
+    animation-duration: 10s;
+    opacity:.3;
+  }
+  
+  @keyframes wave {
+    to {transform: translateX(-100%);}
+  }
+
+/* edited */
+
+
+#new-img {
+position: absolute;
+top: 0px;
+left: 145px;
+}

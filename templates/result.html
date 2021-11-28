@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='result.css') }}" type="text/css">
+</head>
+<body>
+    <img id="new-img" src="{{ url_for('static',filename='some2.png') }}" height="75px" width="75px" >
+    <div id="header">
+        <div id="logo">
+           <h3><span>Vita</span>&nbsp; Max</h3>
+        </div>
+        <nav>
+           <a href="{{url_for('mainn')}}">HOME</a>
+           <a href="{{url_for('land_func')}}">CHAT</a>
+            
+           <a href="{{ url_for('home') }}">GET STARTED</a>
+        </nav>
+     </div>
+     <div id="container1">
+         <center><h1 style="color: black;">You May be lacking these Vitamins:</h1></center>
+         <h2>{% for key, segment in di.items() %}</h2>
+          <div class="container">
+            <div class="card">
+              <div class="icon">
+                <img id="ni" src="{{ url_for('static',filename='some2.png') }}" height="75px" width="75px" >
+                <ion-icon name="cloud-download-outline" class="down" id="d{{key}}"></ion-icon>
+              </div>
+                    {% if key == 'Vitamin A' %}
+                    <script>
+                        document.getElementById('d{{key}}').addEventListener('click',()=>{
+                            window.location.href="{{ url_for('static',filename='va.pdf')}}";
+                        });
+                    </script>
+                    {% endif %}
+                    {% if key == 'Vitamin B' %}
+                        <script>
+                            document.getElementById('d{{key}}').addEventListener('click',()=>{
+                            window.location.href="{{ url_for('static',filename='vb.pdf')}}";
+                        });
+                        </script>
+                    {% endif %}
+                    {% if key == 'Vitamin C' %}
+                        <script>
+                           document.getElementById('d{{key}}').addEventListener('click',()=>{
+                            window.location.href="{{ url_for('static',filename='vc.pdf')}}";
+                        }); 
+                        </script>
+                    {% endif %}
+                    {% if key == 'Vitamin D' %}
+                        <script>
+                            document.getElementById('d{{key}}').addEventListener('click',()=>{
+                            window.location.href="{{ url_for('static',filename='vd.pdf')}}";
+                        });
+                        </script>
+                    {% endif %}
+                    {% if key == 'Vitamin E' %}
+                        <script>
+                           document.getElementById('d{{key}}').addEventListener('click',()=>{
+                            window.location.href="{{ url_for('static',filename='ve.pdf')}}";
+                        }); 
+                        </script>
+                    {% endif %}
+                    {% if key == 'Vitamin K' %}
+                        <script>
+                           document.getElementById('d{{key}}').addEventListener('click',()=>{
+                            window.location.href="{{ url_for('static',filename='vk.pdf')}}";
+                        });
+                        </script>
+                    {% endif %}
+              <div class="content">
+                <h2 style="color:black;">{{key}}</h2>
+                <p style="color:black; font-size: 20px;"><b>Vitamin Pills Required :</b></p><br>
+                {% for i in segment %}
+                    <p  style="color:black;">{{i}}</p><br>
+                {% endfor %}        
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+         </div>
+         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
